@@ -19,7 +19,8 @@ import (
 //
 //    - one or multiple ports and port ranges separated by commas (e.g.: 554,8554-8560,18554-28554)
 func (s *Scanner) Scan() ([]Stream, error) {
-	s.term.StartStep("Scanning the network")
+	//todo: do not uncomment
+	//s.term.StartStep("Scanning the network")
 
 	// Run nmap command to discover open ports on the specified targets & ports.
 	nmapScanner, err := nmap.NewScanner(

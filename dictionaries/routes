@@ -98,6 +98,7 @@ ipcam.sdp
 ipcam_h264.sdp
 ipcam_mjpeg.sdp
 live
+live0
 live.sdp
 live/av0
 live/ch0
@@ -140,6 +141,7 @@ onvif1
 pass@10.0.0.5:6667/blinkhd
 play1.sdp
 play2.sdp
+profile0
 profile2/media.smp
 profile5/media.smp
 rtpvideo1.sdp

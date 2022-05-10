@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"errors"
 	"fmt"
 	"os"
@@ -87,7 +88,14 @@ func main() {
 		printErr(err)
 	}
 
-	c.PrintStreams(streams)
+	//todo: do not uncomment
+	//c.PrintStreams(streams)
+	jb, err := json.Marshal(streams)
+	if err != nil {
+		printErr(err)
+		return
+	}
+	fmt.Println(string(jb))
 }
 
 func printErr(err error) {

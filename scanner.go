@@ -74,13 +74,15 @@ func New(options ...func(*Scanner)) (*Scanner, error) {
 		return nil, fmt.Errorf("unable to parse target file: %v", err)
 	}
 
-	scanner.term.StartStepf("Loading credentials")
+	//todo: do not uncomment
+	//scanner.term.StartStepf("Loading credentials")
 	err = scanner.LoadCredentials()
 	if err != nil {
 		return nil, scanner.term.FailStepf("unable to load credentials dictionary: %v", err)
 	}
 
-	scanner.term.StartStepf("Loading routes")
+	//todo: do not uncomment
+	//scanner.term.StartStepf("Loading routes")
 	err = scanner.LoadRoutes()
 	if err != nil {
 		return nil, scanner.term.FailStepf("unable to load credentials dictionary: %v", err)
